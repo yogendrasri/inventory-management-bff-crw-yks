@@ -75,3 +75,14 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
     {{- end }}
+
+
+
+  env:
+    - name: INGRESS_HOST
+      value: {{ include "starter-kit-chart.host" . }}
+    - name: PROTOCOLS
+      value: {{ include "starter-kit-chart.protocols" . }}
+    - name: SERVICE_URL
+      value: {{ .Values.serviceUrl | quote }}
+  
