@@ -25,6 +25,7 @@ export class StockItemsMockService implements StockItemsApi {
         picture: "https://via.placeholder.com/32.png",
         manufacturer: "Federation Imports"
       },
+      
       {
         id: "3",
         name: "Tooth sharpener",

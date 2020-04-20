@@ -7,3 +7,4 @@ export class StockItemModel {
   picture: string;
   manufacturer: string;
 }
+
