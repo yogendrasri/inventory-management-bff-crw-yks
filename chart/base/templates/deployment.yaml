@@ -59,6 +59,8 @@ spec:
               value: ""
             - name: PROTOCOLS
               value: ""
+            - name: SERVICE_URL
+              value: {{ .Values.serviceUrl | quote }}
             - name: LOG_LEVEL
               value: {{ .Values.logLevel | quote }}
           resources:
@@ -78,11 +80,5 @@ spec:
 
 
 
-  env:
-    - name: INGRESS_HOST
-      value: {{ include "starter-kit-chart.host" . }}
-    - name: PROTOCOLS
-      value: {{ include "starter-kit-chart.protocols" . }}
-    - name: SERVICE_URL
-      value: {{ .Values.serviceUrl | quote }}
+  
   
